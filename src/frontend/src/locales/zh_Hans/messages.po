@@ -8,7 +8,7 @@ msgstr ""
 "Language: zh\n"
 "Project-Id-Version: inventree\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-06-30 09:32\n"
+"PO-Revision-Date: 2026-07-01 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -639,8 +639,8 @@ msgstr "入选"
 #: src/components/dashboard/DashboardLayout.tsx:297
 #: src/components/editors/NotesEditor.tsx:81
 #: src/components/editors/TemplateEditor/TemplateEditor.tsx:158
-#: src/components/forms/fields/ApiFormField.tsx:261
-#: src/components/forms/fields/TableField.tsx:58
+#: src/components/forms/fields/ApiFormField.tsx:299
+#: src/components/forms/fields/TableField.tsx:62
 #: src/components/importer/ImportDataSelector.tsx:206
 #: src/components/importer/ImporterColumnSelector.tsx:330
 #: src/components/importer/ImporterDrawer.tsx:91
@@ -652,7 +652,7 @@ msgstr "入选"
 #: src/components/wizards/ImportPartWizard.tsx:574
 #: src/components/wizards/ImportPartWizard.tsx:719
 #: src/forms/BomForms.tsx:83
-#: src/functions/auth.tsx:693
+#: src/functions/auth.tsx:706
 #: src/pages/ErrorPage.tsx:11
 #: src/pages/Index/Settings/AccountSettings/MFASettings.tsx:317
 #: src/pages/Index/Settings/AccountSettings/MFASettings.tsx:408
@@ -1530,6 +1530,7 @@ msgstr "上传错误"
 
 #: src/components/details/DetailsImage.tsx:299
 #: src/components/forms/fields/AutoFillRightSection.tsx:34
+#: src/components/forms/fields/TreeField.tsx:312
 msgid "Clear"
 msgstr "清除"
 
@@ -1830,21 +1831,21 @@ msgstr "登录成功"
 
 #: src/components/forms/AuthenticationForm.tsx:81
 #: src/components/forms/AuthenticationForm.tsx:89
-#: src/functions/auth.tsx:133
-#: src/functions/auth.tsx:144
+#: src/functions/auth.tsx:148
+#: src/functions/auth.tsx:157
 msgid "Login failed"
 msgstr "登录失败"
 
 #: src/components/forms/AuthenticationForm.tsx:82
 #: src/components/forms/AuthenticationForm.tsx:90
 #: src/components/forms/AuthenticationForm.tsx:106
-#: src/functions/auth.tsx:136
-#: src/functions/auth.tsx:356
+#: src/functions/auth.tsx:134
+#: src/functions/auth.tsx:369
 msgid "Check your input and try again."
 msgstr "请检查您的输入并重试。"
 
 #: src/components/forms/AuthenticationForm.tsx:100
-#: src/functions/auth.tsx:347
+#: src/functions/auth.tsx:360
 msgid "Mail delivery successful"
 msgstr "邮件发送成功"
 
@@ -2108,7 +2109,17 @@ msgstr "已停止"
 msgid "Running"
 msgstr "运行中"
 
-#: src/components/forms/fields/ApiFormField.tsx:215
+#: src/components/forms/fields/ApiFormField.tsx:139
+msgid "Select location"
+msgstr ""
+
+#: src/components/forms/fields/ApiFormField.tsx:155
+#: src/components/forms/fields/IconField.tsx:225
+#: src/components/wizards/ImportPartWizard.tsx:304
+msgid "Select category"
+msgstr "选择分类"
+
+#: src/components/forms/fields/ApiFormField.tsx:253
 msgid "Select file to upload"
 msgstr "选择要上传的文件"
 
@@ -2135,11 +2146,6 @@ msgstr "未分类"
 msgid "Search..."
 msgstr "搜索..."
 
-#: src/components/forms/fields/IconField.tsx:225
-#: src/components/wizards/ImportPartWizard.tsx:304
-msgid "Select category"
-msgstr "选择分类"
-
 #: src/components/forms/fields/IconField.tsx:234
 msgid "Select pack"
 msgstr "选择包"
@@ -2156,6 +2162,7 @@ msgid "Loading"
 msgstr "正在加载"
 
 #: src/components/forms/fields/RelatedModelField.tsx:541
+#: src/components/forms/fields/TreeField.tsx:413
 #: src/components/nav/NavigationTree.tsx:403
 msgid "No results found"
 msgstr "未找到结果"
@@ -2169,17 +2176,42 @@ msgstr "项目"
 msgid "Create New {model}"
 msgstr "创建新的 {model}"
 
-#: src/components/forms/fields/TableField.tsx:59
+#: src/components/forms/fields/TableField.tsx:63
 msgid "modelRenderer entry required for tables"
 msgstr "表格需要 modelRenderer 条目"
 
-#: src/components/forms/fields/TableField.tsx:333
+#: src/components/forms/fields/TableField.tsx:357
 msgid "No entries available"
 msgstr "无可用条目"
 
-#: src/components/forms/fields/TableField.tsx:344
+#: src/components/forms/fields/TableField.tsx:368
 msgid "Add new row"
 msgstr "添加新行"
+
+#: src/components/forms/fields/TreeField.tsx:328
+#: src/components/render/Instance.tsx:225
+#: src/components/render/ModelHoverCard.tsx:73
+#: src/tables/InvenTreeTable.tsx:787
+msgid "View details"
+msgstr "查看详情"
+
+#: src/components/forms/fields/TreeField.tsx:407
+msgid "Select..."
+msgstr ""
+
+#: src/components/forms/fields/TreeField.tsx:413
+#: src/components/wizards/ImportPartWizard.tsx:221
+#: src/forms/StockForms.tsx:761
+msgid "Loading..."
+msgstr "正在加载..."
+
+#: src/components/forms/fields/TreeField.tsx:439
+msgid "Collapse"
+msgstr ""
+
+#: src/components/forms/fields/TreeField.tsx:439
+msgid "Expand"
+msgstr ""
 
 #: src/components/images/DetailsImage.tsx:252
 #~ msgid "Select image"
@@ -2251,7 +2283,7 @@ msgstr "处理数据中"
 #: src/components/importer/ImporterColumnSelector.tsx:299
 #: src/components/items/ErrorItem.tsx:12
 #: src/functions/api.tsx:60
-#: src/functions/auth.tsx:403
+#: src/functions/auth.tsx:416
 msgid "An error occurred"
 msgstr "发生错误"
 
@@ -2542,7 +2574,7 @@ msgid "No items"
 msgstr "没有项目"
 
 #: src/components/items/TransferList.tsx:161
-#: src/components/render/Stock.tsx:102
+#: src/components/render/Stock.tsx:97
 #: src/pages/part/PartDetail.tsx:954
 #: src/pages/stock/StockDetail.tsx:276
 #: src/pages/stock/StockDetail.tsx:1020
@@ -3290,13 +3322,9 @@ msgstr ""
 #~ msgstr "Error occurred while loading plugin content"
 
 #: src/components/render/Instance.tsx:209
+#: src/components/render/ModelHoverCard.tsx:59
 msgid "ID"
 msgstr ""
-
-#: src/components/render/Instance.tsx:225
-#: src/tables/InvenTreeTable.tsx:787
-msgid "View details"
-msgstr "查看详情"
 
 #: src/components/render/Instance.tsx:238
 #~ msgid "Unknown model: {model}"
@@ -3387,8 +3415,8 @@ msgid "Category"
 msgstr "类别"
 
 #: src/components/render/Stock.tsx:36
-#: src/components/render/Stock.tsx:114
-#: src/components/render/Stock.tsx:132
+#: src/components/render/Stock.tsx:109
+#: src/components/render/Stock.tsx:127
 #: src/forms/BuildForms.tsx:849
 #: src/forms/PurchaseOrderForms.tsx:704
 #: src/forms/StockForms.tsx:968
@@ -3410,7 +3438,7 @@ msgstr "类别"
 msgid "Location"
 msgstr "位置"
 
-#: src/components/render/Stock.tsx:99
+#: src/components/render/Stock.tsx:94
 #: src/pages/stock/StockDetail.tsx:209
 #: src/pages/stock/StockDetail.tsx:1008
 #: src/tables/build/BuildOutputTable.tsx:109
@@ -3419,7 +3447,7 @@ msgstr "位置"
 msgid "Serial Number"
 msgstr "序列号"
 
-#: src/components/render/Stock.tsx:104
+#: src/components/render/Stock.tsx:99
 #: src/components/wizards/OrderPartsWizard.tsx:385
 #: src/forms/BomForms.tsx:42
 #: src/forms/BuildForms.tsx:264
@@ -3451,7 +3479,7 @@ msgstr "序列号"
 msgid "Quantity"
 msgstr "数量"
 
-#: src/components/render/Stock.tsx:117
+#: src/components/render/Stock.tsx:112
 #: src/forms/BuildForms.tsx:365
 #: src/forms/BuildForms.tsx:448
 #: src/forms/BuildForms.tsx:523
@@ -3983,11 +4011,6 @@ msgstr "已经载入"
 #: src/tables/purchasing/SupplierPriceBreakTable.tsx:40
 msgid "Supplier"
 msgstr "供应商"
-
-#: src/components/wizards/ImportPartWizard.tsx:221
-#: src/forms/StockForms.tsx:761
-msgid "Loading..."
-msgstr "正在加载..."
 
 #: src/components/wizards/ImportPartWizard.tsx:223
 msgid "Error fetching suppliers"
@@ -5554,7 +5577,7 @@ msgstr "服务内部错误"
 #~ msgstr "You have been logged out"
 
 #: src/functions/auth.tsx:124
-#: src/functions/auth.tsx:222
+#: src/functions/auth.tsx:235
 msgid "Logged Out"
 msgstr "已登出"
 
@@ -5570,93 +5593,93 @@ msgstr "此浏览器存在冲突会话，已被登出。"
 #~ msgid "Found an existing login - welcome back!"
 #~ msgstr "Found an existing login - welcome back!"
 
-#: src/functions/auth.tsx:145
+#: src/functions/auth.tsx:158
 msgid "No response from server."
 msgstr "服务器无响应。"
 
-#: src/functions/auth.tsx:188
+#: src/functions/auth.tsx:201
 msgid "MFA Login successful"
 msgstr "MFA登录验证成功"
 
-#: src/functions/auth.tsx:189
+#: src/functions/auth.tsx:202
 msgid "MFA details were automatically provided in the browser"
 msgstr "浏览器自动提供了MFA验证信息"
 
-#: src/functions/auth.tsx:223
+#: src/functions/auth.tsx:236
 msgid "Successfully logged out"
 msgstr "已成功登出"
 
-#: src/functions/auth.tsx:290
+#: src/functions/auth.tsx:303
 msgid "Language changed"
 msgstr "语言已更改"
 
-#: src/functions/auth.tsx:291
+#: src/functions/auth.tsx:304
 msgid "Your active language has been changed to the one set in your profile"
 msgstr "您的活动语言已被更改为您个人资料中设置的语言"
 
-#: src/functions/auth.tsx:312
+#: src/functions/auth.tsx:325
 msgid "Theme changed"
 msgstr "主题已更改"
 
-#: src/functions/auth.tsx:313
+#: src/functions/auth.tsx:326
 msgid "Your active theme has been changed to the one set in your profile"
 msgstr "您的活动主题已被更改为您个人资料中设置的主题"
 
-#: src/functions/auth.tsx:348
+#: src/functions/auth.tsx:361
 msgid "Check your inbox for a reset link. This only works if you have an account. Check in spam too."
 msgstr "查看收件箱中的重置链接。这只有在您有账户的情况下才会起作用。也请检查垃圾邮件。"
 
-#: src/functions/auth.tsx:355
-#: src/functions/auth.tsx:619
+#: src/functions/auth.tsx:368
+#: src/functions/auth.tsx:632
 msgid "Reset failed"
 msgstr "重置失败"
 
-#: src/functions/auth.tsx:382
+#: src/functions/auth.tsx:395
 msgid "Already logged in"
 msgstr "您已经登陆了"
 
-#: src/functions/auth.tsx:383
+#: src/functions/auth.tsx:396
 msgid "There is a conflicting session on the server for this browser. Please logout of that first."
 msgstr "此浏览器的服务器上存在冲突会话。请先登出该会话。"
 
-#: src/functions/auth.tsx:439
+#: src/functions/auth.tsx:452
 msgid "Logged In"
 msgstr "已登录"
 
-#: src/functions/auth.tsx:440
+#: src/functions/auth.tsx:453
 msgid "Successfully logged in"
 msgstr "已成功登入"
 
-#: src/functions/auth.tsx:574
+#: src/functions/auth.tsx:587
 msgid "Failed to set up MFA"
 msgstr "设置 MFA 失败"
 
-#: src/functions/auth.tsx:593
+#: src/functions/auth.tsx:606
 msgid "MFA Setup successful"
 msgstr "MFA 设置成功"
 
-#: src/functions/auth.tsx:594
+#: src/functions/auth.tsx:607
 msgid "MFA via TOTP has been set up successfully; you will need to login again."
 msgstr "基于 TOTP 的多因素认证（MFA）设置成功；您需要重新登录。"
 
-#: src/functions/auth.tsx:609
+#: src/functions/auth.tsx:622
 msgid "Password set"
 msgstr "密码已设置"
 
-#: src/functions/auth.tsx:610
-#: src/functions/auth.tsx:719
+#: src/functions/auth.tsx:623
+#: src/functions/auth.tsx:732
 msgid "The password was set successfully. You can now login with your new password"
 msgstr "密码设置成功。您现在可以使用新密码登录"
 
-#: src/functions/auth.tsx:684
+#: src/functions/auth.tsx:697
 msgid "Password could not be changed"
 msgstr "无法更改密码"
 
-#: src/functions/auth.tsx:702
+#: src/functions/auth.tsx:715
 msgid "The two password fields didn’t match"
 msgstr "两个密码不匹配"
 
-#: src/functions/auth.tsx:718
+#: src/functions/auth.tsx:731
 msgid "Password Changed"
 msgstr "密码已更改"
 
